@@ -18,17 +18,18 @@ let generateDomain = () => {
 
   //FOR LOOP(S)
 
-  let newArr=[]
+  let textHTML='<ul id="thedomain" class="list-group">';
   for(let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
       for (let x = 0; x < noun.length; x++) {
          for (let y = 0; y < ext.length; y++) {
-           newArr.push(pronoun[i] + adj[j] + noun[x] + ext[y]);
+           let domainName= pronoun[i] + adj[j] + noun[x] + ext[y];
+           textHTML+='<li class="list-group-item">' + domainName + '</li>';
           }
       }
     }
   }
-  return newArr;
+  return textHTML;
 }
 
 
